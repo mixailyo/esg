@@ -1,0 +1,9 @@
+.bg-circle {
+  position: absolute;
+  top: -25vh;
+  z-index: -1; 
+  @include adaptiveFull('--coefficient', 1, 1, 0.5);
+  width: calc(100% * var(--coefficient));
+  height: calc(100% * var(--coefficient));
+  transform: scale(1.25);
+}

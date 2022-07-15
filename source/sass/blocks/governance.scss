@@ -1,0 +1,15 @@
+.governance {
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    @include adaptiveDesktopToMobile('top', 80, 150);
+    @include adaptiveDesktopToMobile('right', 0, -400);
+    @include adaptiveDesktopToMobile('width', 1077, 359);
+    @include adaptiveDesktopToMobile('height', 607, 202);
+    background-image: url(../../img/bg/illustration-governance.png);
+    background-size: cover;
+    z-index: 0;
+  }
+}

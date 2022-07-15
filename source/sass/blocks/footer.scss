@@ -1,5 +1,23 @@
 .footer {
-  padding: 40px 0;
+  width: 1140px;
+  max-width: calc(100vw - 80px);
+  margin: 0 auto;
+  @include adaptiveFull('margin-top', 140, 140, 0);
 
-  background-color: $color-neon-blue;
+  @include vp-1023 {
+    display: none;
+  }
+}
+.footer__menu {
+}
+.footer__menu-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer__menu-list-item {
+  
+}
+.footer__menu-link {
+  color: $color-default-white;
 }

@@ -1,0 +1,20 @@
+.enviromental {
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    @include adaptiveDesktopToMobile('top', -10, 450);
+    @include adaptiveDesktopToMobile('right', 0, -400);
+    @include adaptiveDesktopToMobile('width', 947, 315);
+    @include adaptiveDesktopToMobile('height', 773, 258);
+    background-image: url(../../img/bg/illustration-enviromental.png);
+    background-size: cover;
+  }
+
+  @include vp-1439 {
+    &::before {
+      @include adaptiveDesktopToMobile('top', -10, 200);
+    }
+  }
+}

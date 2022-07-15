@@ -2,6 +2,8 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html,
@@ -15,8 +17,8 @@ html {
   font-style: normal;
   font-weight: 400;
   font-size: $fz-default;
-  line-height: 24px;
-  font-family: $ff-placeholder;
+  line-height: 1.44;
+  font-family: $font-family-main;
   color: $color-default-black;
 
   -webkit-font-smoothing: antialiased;
@@ -32,6 +34,10 @@ body {
   height: 100%;
 
   background-color: $color-default-white;
+}
+
+ul {
+  list-style: none;
 }
 
 a {
@@ -126,4 +132,10 @@ button,
 [type="reset"],
 [type="submit"] {
   appearance: none;
+}
+
+button {
+  border: unset;
+  background: unset;
+  cursor: pointer;
 }

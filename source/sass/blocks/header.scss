@@ -1,13 +1,136 @@
 .header {
-  padding: 28px 0;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+  width: 100vw;
+  padding: 15px 0;
+  transition: background-color 0.7s ease-in-out;
 
-  background-color: $color-neon-blue;
-
-  .container {
-    display: flex;
+  @include vp-1279 {
+    position: relative;
+    top: unset;
+    left: unset;
+    transform: unset;
+    justify-content: flex-end;
+    max-width: calc(100vw - 40px);
   }
 
-  &__logo {
-    color: $color-default-white;
+  &--active {
+    background-color: $color-deep-sky-blue;
+
+    .header__logo {
+      transform: translateY(-50%);
+    }
+  }
+
+  @include vp-1279 {
+    &--active {
+      background-color: unset;
+    }
+  }
+}
+.header__logo {
+  position: absolute;
+  top: 50%;
+  @include adaptiveFull('left', -150, -150, 300);
+  transform: translateY(-300%) scale(3);
+  transition: transform 0.7s ease-in-out;
+
+  @include vp-1279 {
+    position: static;
+    margin-top: auto;
+    transform: translateY(-50%);
+  }
+}
+.header__menu {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  position: relative;
+
+  @include vp-1279 {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $color-default-white;
+    padding: 0 35px;
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    overflow: auto;
+
+    &--active {
+      transform: none;
+    }
+  }
+}
+.header__menu-list {
+  display: flex;
+  justify-content: space-between;
+  width: 970px;
+
+  @include vp-1279 {
+    flex-direction: column;
+    margin-top: 130px;
+    width: auto;
+  }
+}
+.header__menu-list-item {
+
+  @include vp-1279 {
+    &:not(:last-child) {
+      @include adaptiveDesktopToMobile('margin-bottom', 50, 30);
+    }
+  }
+}
+.header__menu-link {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  color: $color-default-white;
+
+  &::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: $color-default-white;
+    content: "";
+    transform: translate3d(-101%,0,0);
+    transition: transform .5s cubic-bezier(0.11, 0.7, 0, 1);
+  }
+
+  &:hover {
+    &::after {
+      transform: translate3d(0,0,0);
+    }
+  }
+
+  @include vp-1279 {
+    @include adaptiveDesktopToMobile('font-size', 50, 22);
+    color: $color-default-black;
+  }
+}
+.header__hamburger {
+  display: none;
+  z-index: 6;
+
+  &.is-active {
+    position: fixed;
+  }
+
+  @include vp-1279 {
+    display: block;
   }
 }

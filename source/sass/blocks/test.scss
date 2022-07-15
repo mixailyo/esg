@@ -1,0 +1,115 @@
+.test {
+  &--green {
+    --test-main-color: #29CD90;
+    background: rgba(#29CD90, 0.1);
+  }
+
+  &--blue {
+    --test-main-color: #6AE7FC;
+    background: rgba(#6AE7FC, 0.1);
+  }
+
+  &--pink {
+    --test-main-color: #FF78AC;
+    background: rgba(#FF78AC, 0.1);
+  }
+
+  &--passed {
+    button {
+      pointer-events: none;
+    }
+  }
+
+  border-radius: 20px;
+  @include adaptiveFull('padding-top', 30, 30, 16);
+  @include adaptiveFull('padding-bottom', 30, 30, 16);
+  @include adaptiveFull('padding-right', 45, 45, 20);
+  @include adaptiveFull('padding-left', 45, 45, 20);
+}
+.test__question {
+  font-weight: 500;
+  @include adaptiveFull('font-size', 38, 38, 28);
+  line-height: 1.2;
+}
+.test__answers {
+  @include adaptiveFull('margin-top', 30, 30, 24);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  @include adaptiveFull('column-gap', 32, 32, 16);
+  row-gap: 16px;
+}
+.test__answer {
+  background: $color-default-white;
+  border-radius: 20px;
+  min-height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+
+  button {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    transition: background-color $trans-default;
+
+    &:hover {
+      background-color: var(--test-main-color);
+      color: $color-default-white;
+    }
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    z-index: 0;
+    transition: left 0.3s linear;
+  }
+
+  &--true {
+    &::before {
+      left: 50%;
+      background-color: var(--test-main-color);
+    }
+
+    button {
+      color: $color-default-white;
+      font-weight: 700;
+      font-size: 24px;
+      z-index: 1;
+    }
+  }
+
+  &--false {
+    &::before {
+      left: 50%;
+      background-color: $color-torch-red;
+    }
+    
+    button {
+      color: $color-default-white;
+      font-weight: 700;
+      font-size: 24px;
+      z-index: 1;
+    }
+  }
+
+  @include vp-1023 {
+    button {
+      &:hover {
+        background-color: unset;
+      }
+    }
+  }
+}
+.test__count {
+  @include adaptiveFull('margin-top', 30, 30, 16);
+  @include adaptiveFull('font-size', 18, 18, 14);
+}

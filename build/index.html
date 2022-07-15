@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Project Name - описание">
+  <!-- генерируйте favicon тут - https://realfavicongenerator.net/ -->
+  <!-- ! в подключение фавикон манифеста обязательно добавьте строчки crossorigin="use-credentials"-->
+  <!-- <link href="favicon/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+<link href="favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+<link href="favicon/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+<link href="favicon/site.webmanifest" rel="manifest" crossorigin="use-credentials">
+<link color="#c84659" href="favicon/safari-pinned-tab.svg" rel="mask-icon">
+<link href="favicon/favicon.ico" rel="shortcut icon">
+<meta content="#ffffff" name="msapplication-TileColor">
+<meta content="favicon/browserconfig.xml" name="msapplication-config">
+<meta content="#ffffff" name="theme-color">
+ -->
+  <!-- используйте только для шрифта находящегося на первом экране -->
+  <!-- <link rel="preload" href="fonts/placeholder.woff2" as="font" crossorigin="anonymous"> -->
+  <link rel="stylesheet" href="css/style.min.css">
+  <title>ESG</title>
+</head>
+
+<body>
+  <div style="display: none;">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <defs>
+        <clipPath id="clip0_349_1511">
+          <rect width="42.0292" height="41.8322" fill="white" transform="translate(0.03125 0.924316)" />
+        </clipPath>
+      </defs>
+      <symbol id="icon-close" viewBox="0 0 20 20">
+        <path d="M.293 18.291a1 1 0 101.414 1.414L10 11.413l8.292 8.292a1 1 0 101.414-1.414l-8.292-8.292 8.292-8.292A1 1 0 1018.291.293L9.999 8.585 1.707.293A1 1 0 10.293 1.707L8.585 10 .293 18.291z" />
+      </symbol>
+      <symbol id="icon-ok" viewBox="0 0 12 19">
+        <path d="M5.92817 9.80459C8.71449 9.80459 10.9859 7.60296 10.9859 4.9023C10.9859 2.20163 8.71449 0 5.92817 0C3.14185 0 0.870397 2.20163 0.870397 4.9023C0.870397 7.60296 3.14185 9.80459 5.92817 9.80459ZM5.92817 2.8768C7.07904 2.8768 8.01791 3.7868 8.01791 4.9023C8.01791 6.01779 7.07904 6.92779 5.92817 6.92779C4.7773 6.92779 3.83843 6.01779 3.83843 4.9023C3.83843 3.7868 4.7773 2.8768 5.92817 2.8768Z" fill="black" />
+        <path d="M7.95735 13.7968C8.98708 13.562 9.98652 13.1804 10.8951 12.6226C11.5917 12.2116 11.8037 11.3016 11.3494 10.6265C10.9254 9.95131 9.98652 9.74582 9.28994 10.1861C7.23048 11.4484 4.53502 11.4484 2.47557 10.1861C1.77899 9.77518 0.870405 9.95131 0.416113 10.6265C-0.00789184 11.3016 0.173825 12.1823 0.870405 12.6226C1.77899 13.1804 2.77843 13.562 3.80815 13.7968L1.05212 16.5562C0.476686 17.1139 0.476686 18.0239 1.05212 18.5817C1.35498 18.8752 1.71842 18.9927 2.11213 18.9927C2.50585 18.9927 2.86929 18.8459 3.17215 18.5817L5.95847 15.881L8.74479 18.5817C9.32022 19.1394 10.2591 19.1394 10.8345 18.5817C11.41 18.0239 11.41 17.1139 10.8345 16.5562L7.95735 13.7968Z" fill="black" />
+      </symbol>
+      <symbol id="icon-url" viewBox="0 0 20 16">
+        <path d="M12.5077 6.67306C12.4042 6.3021 12.0301 6.08605 11.6679 6.19204C11.3057 6.29802 11.0948 6.68121 11.1983 7.05217C11.4132 7.83892 11.1983 8.67866 10.6371 9.25751L6.03636 13.9699C5.1767 14.8504 3.78374 14.8504 2.9201 13.9699C2.06045 13.0894 2.06045 11.6626 2.9201 10.778L7.52086 6.06567C7.82333 5.75586 8.2054 5.54389 8.61931 5.4542C8.98546 5.38083 9.22425 5.01395 9.15261 4.63484C9.08097 4.25573 8.72278 4.01522 8.35265 4.0886C8.34868 4.0886 8.34469 4.0886 8.34071 4.09268C7.66413 4.23943 7.04725 4.58185 6.5617 5.08325L1.96095 9.7956C0.579927 11.2305 0.599827 13.5418 2.00075 14.9523C3.38575 16.3505 5.61051 16.3505 6.99949 14.9523L11.6002 10.2399C12.5077 9.30643 12.8539 7.9449 12.5077 6.67306Z" fill="black" />
+        <path d="M18.8955 1.06806C18.2269 0.383217 17.3194 3.18604e-05 16.3762 3.18604e-05C15.433 -0.00404457 14.5256 0.383217 13.8569 1.06806L9.26016 5.78041C8.34876 6.71392 8.00251 8.07952 8.34876 9.34729C8.45224 9.71825 8.82635 9.9343 9.18852 9.82831C9.55069 9.72232 9.76163 9.33914 9.65815 8.96818C9.44323 8.18143 9.65815 7.34169 10.2193 6.76283L14.8201 2.05048C15.6797 1.16997 17.0727 1.16997 17.9363 2.05048C18.796 2.93099 18.796 4.35774 17.9363 5.24232L13.3356 9.95468C13.0331 10.2645 12.651 10.4765 12.2331 10.5661C11.867 10.6436 11.6282 11.0146 11.7078 11.3896C11.7755 11.7116 12.054 11.944 12.3764 11.944C12.4242 11.944 12.4719 11.9399 12.5157 11.9277C13.1923 11.7809 13.8092 11.4385 14.2947 10.9371L18.8955 6.22475C20.2845 4.80207 20.2845 2.49481 18.8955 1.06806Z" fill="black" />
+      </symbol>
+      <symbol id="icon-vk" viewBox="0 0 21 20">
+        <path d="M11.089 14.3594C6.57384 14.3594 3.83594 11.2439 3.73186 6.06465H6.02146C6.09351 9.86541 7.83071 11.4829 9.16764 11.8096V6.06465H11.3612V9.34748C12.6501 9.20406 13.995 7.71404 14.4433 6.06465H16.5968C16.2526 8.08853 14.7875 9.58653 13.7548 10.2001C14.7875 10.6941 16.4607 12.0008 17.1012 14.3594H14.7315C14.2352 12.7817 13.0023 11.5626 11.3612 11.3953V14.3594H11.089ZM9.95219 19.9211H10.7848C15.3079 19.9211 17.5735 19.9211 18.9745 18.5267C20.3674 17.1243 20.3674 14.8693 20.3674 10.3833V9.53872C20.3674 5.04474 20.3674 2.79776 18.9745 1.39538C17.5735 0.000976562 15.3079 0.000976562 10.7848 0.000976562H9.95219C5.42905 0.000976562 3.16347 0.000976562 1.75449 1.39538C0.345511 2.78979 0.353517 5.05271 0.353517 9.53872V10.3833C0.353517 14.8773 0.353517 17.1243 1.75449 18.5267C3.15546 19.929 5.42905 19.9211 9.95219 19.9211Z" fill="black" />
+      </symbol>
+      <symbol id="logo-vk" viewBox="0 0 43 43">
+        <g clip-path="url(#clip0_349_1511)">
+          <path d="M20.1834 42.7565H21.9335C31.4338 42.7565 36.1848 42.7565 39.1352 39.8199C42.0857 36.8833 42.0604 32.1562 42.0604 22.7239V20.9569C42.0604 11.5263 42.0604 6.79757 39.1352 3.86094C36.21 0.924325 31.4338 0.924316 21.9335 0.924316H20.1834C10.6814 0.924316 5.93215 0.924325 2.9817 3.86094C0.0312481 6.79757 0.03125 11.5229 0.03125 20.9569V22.7239C0.03125 32.1562 0.0312481 36.8833 2.9817 39.8199C5.93215 42.7565 10.6814 42.7565 20.1834 42.7565Z" fill="#0077FF" />
+          <path d="M22.5864 31.0849C13.1096 31.0849 7.35836 24.5407 7.13477 13.666H11.9345C12.0841 21.6543 15.7356 25.0444 18.5348 25.7354V13.666H23.1361V20.5583C25.8361 20.2604 28.6604 17.1247 29.612 13.666H34.136C33.4114 17.9212 30.3366 21.0569 28.1611 22.3504C30.3366 23.3962 33.8367 26.1337 35.1867 31.0849H30.2121C29.1614 27.7752 26.5859 25.2117 23.1361 24.8637V31.0849H22.5864Z" fill="white" />
+        </g>
+      </symbol>
+    </svg>
+  </div>
+  <div class="wrapper">
+    <header class="header">
+      <nav class="header__menu">
+        <svg class="header__logo" width="42" height="42" aria-hidden="true">
+          <use xlink:href="#logo-vk"></use>
+        </svg>
+        <ul class="header__menu-list">
+          <li class="header__menu-list-item">
+            <a href="#welcome" class="header__menu-link">Манифест</a>
+          </li>
+          <li class="header__menu-list-item">
+            <a href="#people" class="header__menu-link">Люди о проектах</a>
+          </li>
+          <li class="header__menu-list-item">
+            <a href="#enviromental" class="header__menu-link">Enviromental</a>
+          </li>
+          <li class="header__menu-list-item">
+            <a href="#social" class="header__menu-link">Social</a>
+          </li>
+          <li class="header__menu-list-item">
+            <a href="#governance" class="header__menu-link">Governance</a>
+          </li>
+          <li class="header__menu-list-item">
+            <a href="#share" class="header__menu-link">ESG-отчёт</a>
+          </li>
+        </ul>
+      </nav>
+      <button class="header__hamburger hamburger hamburger--spring" type="button">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
+    </header>
+    <main>
+      <section id="welcome" class="welcome">
+        <img src="img/svg/vk-logo.svg" class="welcome__logo" width="123" height="123">
+        <h1 class="welcome__title title-lg">VK&nbsp;помогает объединяться вокруг действительно важного</h1>
+        <p class="welcome__description">
+          Мы&nbsp;уделяем особое внимание социальным и&nbsp;экологическим проблемам, созданию комфортных условий для наших сотрудников&nbsp;&mdash; и&nbsp;вместе с&nbsp;пользователями, партнерами и&nbsp;клиентами добиваемся изменений к&nbsp;лучшему.
+        </p>
+        <p class="welcome__thanks">
+          Эта страница расскажет о&nbsp;самых важных социальных, экологических и&nbsp;управленческих инициативах&nbsp;VK за&nbsp;2021&nbsp;год. Спасибо, что были частью этих проектов!
+        </p>
+        <a href="#welcome-video" class="welcome__button">
+          <img src="img/svg/btn-with-arrow.svg" class="welcome__button-pic" width="24" height="24" />
+        </a>
+        <div id="welcome-video" class="welcome__video-wrapper">
+          <iframe class="welcome__video" src="https://vk.com/video_ext.php?oid=-156923926&id=456239224&hash=bef29bb9e29e41e0" width="640" height="360" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>
+        </div>
+        <img class="bg-circle" id="circle5" src="img/bg/bg-circle-blue.png" />
+      </section>
+      <section id="people" class="people">
+        <h2 class="people__title title-lg">
+          Люди о&nbsp;ESG-проектах VK
+        </h2>
+        <div class="people__wrapper">
+          <div class="people__slider swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide swiper-slide--less">
+                <div class="people__card">
+                  <div class="people__card-video">
+                    <iframe class="people__card-video-frame" src="https://vk.com/video_ext.php?oid=-194351072&id=456239560&hash=d0e2194eb596dff2" width="333" height="660" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                  </div>
+                  <button class="like-button" data-id="1">
+                    <svg class="like-button__icon" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9.02632 4.88C5.42193 4.88 2.5 7.80194 2.5 11.4063C2.5 15.0191 3.94498 16.8274 9.99323 21.5316L12.7721 23.6929C13.4943 24.2547 14.5057 24.2547 15.2279 23.6929L18.0068 21.5316C24.055 16.8274 25.5 15.0191 25.5 11.4063C25.5 7.80194 22.5781 4.88 18.9737 4.88C17.1022 4.88 15.4359 5.73037 14 7.36655C12.5641 5.73037 10.8978 4.88 9.02632 4.88ZM9.02632 6.88C10.5455 6.88 11.9149 7.73752 13.1775 9.56335L13.3831 9.86069C13.6187 10.2014 14.0859 10.2866 14.4266 10.051C14.501 9.99953 14.5654 9.93507 14.6169 9.86069L14.8225 9.56335C16.0851 7.73752 17.4545 6.88 18.9737 6.88C21.4735 6.88 23.5 8.90651 23.5 11.4063C23.5 14.1866 22.3625 15.61 16.7789 19.9529L14 22.1142L11.2211 19.9529C5.63746 15.61 4.5 14.1866 4.5 11.4063C4.5 8.90651 6.5265 6.88 9.02632 6.88Z" fill="white" />
+                      <path d="M9.02632 4.88C5.42193 4.88 2.5 7.80194 2.5 11.4063C2.5 15.0191 3.94498 16.8274 9.99323 21.5316L12.7721 23.6929C13.4943 24.2547 14.5057 24.2547 15.2279 23.6929L18.0068 21.5316C24.055 16.8274 25.5 15.0191 25.5 11.4063C25.5 7.80194 22.5781 4.88 18.9737 4.88C17.1022 4.88 15.4359 5.73037 14 7.36655C12.5641 5.73037 10.8978 4.88 9.02632 4.88Z" fill="white" />
+                    </svg>
+                    <span class="like-button__counter">-</span>
+                  </button>
+                </div>
+              </div>
+              <div class="swiper-slide swiper-slide--more">
+                <div class="people__card">
+                  <div class="people__card-video">
+                    <iframe class="people__card-video-frame" src="https://vk.com/video_ext.php?oid=-194351072&id=456239564&hash=e0e5a50e8794e669" width="333" height="660" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                  </div>
+                  <button class="like-button" data-id="2">
+                    <svg class="like-button__icon" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9.02632 4.88C5.42193 4.88 2.5 7.80194 2.5 11.4063C2.5 15.0191 3.94498 16.8274 9.99323 21.5316L12.7721 23.6929C13.4943 24.2547 14.5057 24.2547 15.2279 23.6929L18.0068 21.5316C24.055 16.8274 25.5 15.0191 25.5 11.4063C25.5 7.80194 22.5781 4.88 18.9737 4.88C17.1022 4.88 15.4359 5.73037 14 7.36655C12.5641 5.73037 10.8978 4.88 9.02632 4.88ZM9.02632 6.88C10.5455 6.88 11.9149 7.73752 13.1775 9.56335L13.3831 9.86069C13.6187 10.2014 14.0859 10.2866 14.4266 10.051C14.501 9.99953 14.5654 9.93507 14.6169 9.86069L14.8225 9.56335C16.0851 7.73752 17.4545 6.88 18.9737 6.88C21.4735 6.88 23.5 8.90651 23.5 11.4063C23.5 14.1866 22.3625 15.61 16.7789 19.9529L14 22.1142L11.2211 19.9529C5.63746 15.61 4.5 14.1866 4.5 11.4063C4.5 8.90651 6.5265 6.88 9.02632 6.88Z" fill="white" />
+                      <path d="M9.02632 4.88C5.42193 4.88 2.5 7.80194 2.5 11.4063C2.5 15.0191 3.94498 16.8274 9.99323 21.5316L12.7721 23.6929C13.4943 24.2547 14.5057 24.2547 15.2279 23.6929L18.0068 21.5316C24.055 16.8274 25.5 15.0191 25.5 11.4063C25.5 7.80194 22.5781 4.88 18.9737 4.88C17.1022 4.88 15.4359 5.73037 14 7.36655C12.5641 5.73037 10.8978 4.88 9.02632 4.88Z" fill="white" />
+                    </svg>
+                    <span class="like-button__counter">-</span>
+                  </button>
+                </div>
+              </div>
+              <div class="swiper-slide swiper-slide--less">
+                <div class="people__card">
+                  <div class="people__card-video">
+                    <iframe class="people__card-video-frame" src="https://vk.com/video_ext.php?oid=-194351072&id=456239480&hash=a52f42a1827e1ab8" width="333" height="660" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                  </div>
+                  <button class="like-button" data-id="3">
+                    <svg class="like-button__icon" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9.02632 4.88C5.42193 4.88 2.5 7.80194 2.5 11.4063C2.5 15.0191 3.94498 16.8274 9.99323 21.5316L12.7721 23.6929C13.4943 24.2547 14.5057 24.2547 15.2279 23.6929L18.0068 21.5316C24.055 16.8274 25.5 15.0191 25.5 11.4063C25.5 7.80194 22.5781 4.88 18.9737 4.88C17.1022 4.88 15.4359 5.73037 14 7.36655C12.5641 5.73037 10.8978 4.88 9.02632 4.88ZM9.02632 6.88C10.5455 6.88 11.9149 7.73752 13.1775 9.56335L13.3831 9.86069C13.6187 10.2014 14.0859 10.2866 14.4266 10.051C14.501 9.99953 14.5654 9.93507 14.6169 9.86069L14.8225 9.56335C16.0851 7.73752 17.4545 6.88 18.9737 6.88C21.4735 6.88 23.5 8.90651 23.5 11.4063C23.5 14.1866 22.3625 15.61 16.7789 19.9529L14 22.1142L11.2211 19.9529C5.63746 15.61 4.5 14.1866 4.5 11.4063C4.5 8.90651 6.5265 6.88 9.02632 6.88Z" fill="white" />
+                      <path d="M9.02632 4.88C5.42193 4.88 2.5 7.80194 2.5 11.4063C2.5 15.0191 3.94498 16.8274 9.99323 21.5316L12.7721 23.6929C13.4943 24.2547 14.5057 24.2547 15.2279 23.6929L18.0068 21.5316C24.055 16.8274 25.5 15.0191 25.5 11.4063C25.5 7.80194 22.5781 4.88 18.9737 4.88C17.1022 4.88 15.4359 5.73037 14 7.36655C12.5641 5.73037 10.8978 4.88 9.02632 4.88Z" fill="white" />
+                    </svg>
+                    <span class="like-button__counter">-</span>
+                  </button>
+                </div>
+              </div>
+              <div class="swiper-slide swiper-slide--more">
+                <div class="people__card">
+                  <div class="people__card-video">
+                    <iframe class="people__card-video-frame" src="https://vk.com/video_ext.php?oid=-194351072&id=456239591&hash=a800bce52ecc03d6" width="333" height="660" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                  </div>
+                  <button class="like-button" data-id="4">
+                    <svg class="like-button__icon" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9.02632 4.88C5.42193 4.88 2.5 7.80194 2.5 11.4063C2.5 15.0191 3.94498 16.8274 9.99323 21.5316L12.7721 23.6929C13.4943 24.2547 14.5057 24.2547 15.2279 23.6929L18.0068 21.5316C24.055 16.8274 25.5 15.0191 25.5 11.4063C25.5 7.80194 22.5781 4.88 18.9737 4.88C17.1022 4.88 15.4359 5.73037 14 7.36655C12.5641 5.73037 10.8978 4.88 9.02632 4.88ZM9.02632 6.88C10.5455 6.88 11.9149 7.73752 13.1775 9.56335L13.3831 9.86069C13.6187 10.2014 14.0859 10.2866 14.4266 10.051C14.501 9.99953 14.5654 9.93507 14.6169 9.86069L14.8225 9.56335C16.0851 7.73752 17.4545 6.88 18.9737 6.88C21.4735 6.88 23.5 8.90651 23.5 11.4063C23.5 14.1866 22.3625 15.61 16.7789 19.9529L14 22.1142L11.2211 19.9529C5.63746 15.61 4.5 14.1866 4.5 11.4063C4.5 8.90651 6.5265 6.88 9.02632 6.88Z" fill="white" />
+                      <path d="M9.02632 4.88C5.42193 4.88 2.5 7.80194 2.5 11.4063C2.5 15.0191 3.94498 16.8274 9.99323 21.5316L12.7721 23.6929C13.4943 24.2547 14.5057 24.2547 15.2279 23.6929L18.0068 21.5316C24.055 16.8274 25.5 15.0191 25.5 11.4063C25.5 7.80194 22.5781 4.88 18.9737 4.88C17.1022 4.88 15.4359 5.73037 14 7.36655C12.5641 5.73037 10.8978 4.88 9.02632 4.88Z" fill="white" />
+                    </svg>
+                    <span class="like-button__counter">-</span>
+                  </button>
+                </div>
+              </div>
+              <div class="swiper-slide swiper-slide--less">
+                <div class="people__card">
+                  <div class="people__card-video">
+                    <iframe class="people__card-video-frame" src="https://vk.com/video_ext.php?oid=-194351072&id=456239626&hash=559a51a36be166d6" width="333" height="660" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                  </div>
+                  <button class="like-button" data-id="5">
+                    <svg class="like-button__icon" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9.02632 4.88C5.42193 4.88 2.5 7.80194 2.5 11.4063C2.5 15.0191 3.94498 16.8274 9.99323 21.5316L12.7721 23.6929C13.4943 24.2547 14.5057 24.2547 15.2279 23.6929L18.0068 21.5316C24.055 16.8274 25.5 15.0191 25.5 11.4063C25.5 7.80194 22.5781 4.88 18.9737 4.88C17.1022 4.88 15.4359 5.73037 14 7.36655C12.5641 5.73037 10.8978 4.88 9.02632 4.88ZM9.02632 6.88C10.5455 6.88 11.9149 7.73752 13.1775 9.56335L13.3831 9.86069C13.6187 10.2014 14.0859 10.2866 14.4266 10.051C14.501 9.99953 14.5654 9.93507 14.6169 9.86069L14.8225 9.56335C16.0851 7.73752 17.4545 6.88 18.9737 6.88C21.4735 6.88 23.5 8.90651 23.5 11.4063C23.5 14.1866 22.3625 15.61 16.7789 19.9529L14 22.1142L11.2211 19.9529C5.63746 15.61 4.5 14.1866 4.5 11.4063C4.5 8.90651 6.5265 6.88 9.02632 6.88Z" fill="white" />
+                      <path d="M9.02632 4.88C5.42193 4.88 2.5 7.80194 2.5 11.4063C2.5 15.0191 3.94498 16.8274 9.99323 21.5316L12.7721 23.6929C13.4943 24.2547 14.5057 24.2547 15.2279 23.6929L18.0068 21.5316C24.055 16.8274 25.5 15.0191 25.5 11.4063C25.5 7.80194 22.5781 4.88 18.9737 4.88C17.1022 4.88 15.4359 5.73037 14 7.36655C12.5641 5.73037 10.8978 4.88 9.02632 4.88Z" fill="white" />
+                    </svg>
+                    <span class="like-button__counter">-</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="people__slider-navigation">
+              <button class="slider-navigation-btn slider-navigation-btn--prev"></button>
+              <button class="slider-navigation-btn slider-navigation-btn--next"></button>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+          <img class="bg-circle" id="circle1" src="img/svg/bg-circle-purple.svg" />
+        </div>
+      </section>
+      <section class="news">
+        <div class="news__slider swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="news__post">
+                <div class="news__post-wrapper">
+                  <div class="news__post-header">
+                    <img src="img/content/news-post-logo.png" class="news__post-logo">
+                    <div class="news__post-header-text">
+                      <h3 class="news__post-title">Serious Science</h3>
+                      <p class="news__post-date">December 31, 2021</p>
+                    </div>
+                    <svg class="news__post-vk-logo" width="25" height="25" aria-hidden="true">
+                      <use xlink:href="#logo-vk"></use>
+                    </svg>
+                  </div>
+                  <div class="news__post-text">
+                    How does diabetes challenge sustainable development of low-income countries?
+                  </div>
+                  <a href="#" class="news__post-link">Read more</a>
+                </div>
+                <img src="img/content/news-post-photo.png" class="news__post-photo">
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="news__post">
+                <div class="news__post-wrapper">
+                  <div class="news__post-header">
+                    <img src="img/content/news-post-logo.png" class="news__post-logo">
+                    <div class="news__post-header-text">
+                      <h3 class="news__post-title">Serious Science</h3>
+                      <p class="news__post-date">December 31, 2021</p>
+                    </div>
+                    <svg class="news__post-vk-logo" width="25" height="25" aria-hidden="true">
+                      <use xlink:href="#logo-vk"></use>
+                    </svg>
+                  </div>
+                  <div class="news__post-text">
+                    How does diabetes challenge sustainable development of low-income countries?
+                  </div>
+                  <a href="#" class="news__post-link">Read more</a>
+                </div>
+                <img src="img/content/news-post-photo.png" class="news__post-photo">
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="news__post">
+                <div class="news__post-wrapper">
+                  <div class="news__post-header">
+                    <img src="img/content/news-post-logo.png" class="news__post-logo">
+                    <div class="news__post-header-text">
+                      <h3 class="news__post-title">Serious Science</h3>
+                      <p class="news__post-date">December 31, 2021</p>
+                    </div>
+                    <svg class="news__post-vk-logo" width="25" height="25" aria-hidden="true">
+                      <use xlink:href="#logo-vk"></use>
+                    </svg>
+                  </div>
+                  <div class="news__post-text">
+                    How does diabetes challenge sustainable development of low-income countries?
+                  </div>
+                  <a href="#" class="news__post-link">Read more</a>
+                </div>
+                <img src="img/content/news-post-photo.png" class="news__post-photo">
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="news__post">
+                <div class="news__post-wrapper">
+                  <div class="news__post-header">
+                    <img src="img/content/news-post-logo.png" class="news__post-logo">
+                    <div class="news__post-header-text">
+                      <h3 class="news__post-title">Serious Science</h3>
+                      <p class="news__post-date">December 31, 2021</p>
+                    </div>
+                    <svg class="news__post-vk-logo" width="25" height="25" aria-hidden="true">
+                      <use xlink:href="#logo-vk"></use>
+                    </svg>
+                  </div>
+                  <div class="news__post-text">
+                    How does diabetes challenge sustainable development of low-income countries?
+                  </div>
+                  <a href="#" class="news__post-link">Read more</a>
+                </div>
+                <img src="img/content/news-post-photo.png" class="news__post-photo">
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="news__post">
+                <div class="news__post-wrapper">
+                  <div class="news__post-header">
+                    <img src="img/content/news-post-logo.png" class="news__post-logo">
+                    <div class="news__post-header-text">
+                      <h3 class="news__post-title">Serious Science</h3>
+                      <p class="news__post-date">December 31, 2021</p>
+                    </div>
+                    <svg class="news__post-vk-logo" width="25" height="25" aria-hidden="true">
+                      <use xlink:href="#logo-vk"></use>
+                    </svg>
+                  </div>
+                  <div class="news__post-text">
+                    How does diabetes challenge sustainable development of low-income countries?
+                  </div>
+                  <a href="#" class="news__post-link">Read more</a>
+                </div>
+                <img src="img/content/news-post-photo.png" class="news__post-photo">
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="news__post">
+                <div class="news__post-wrapper">
+                  <div class="news__post-header">
+                    <img src="img/content/news-post-logo.png" class="news__post-logo">
+                    <div class="news__post-header-text">
+                      <h3 class="news__post-title">Serious Science</h3>
+                      <p class="news__post-date">December 31, 2021</p>
+                    </div>
+                    <svg class="news__post-vk-logo" width="25" height="25" aria-hidden="true">
+                      <use xlink:href="#logo-vk"></use>
+                    </svg>
+                  </div>
+                  <div class="news__post-text">
+                    How does diabetes challenge sustainable development of low-income countries?
+                  </div>
+                  <a href="#" class="news__post-link">Read more</a>
+                </div>
+                <img src="img/content/news-post-photo.png" class="news__post-photo">
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="news__post">
+                <div class="news__post-wrapper">
+                  <div class="news__post-header">
+                    <img src="img/content/news-post-logo.png" class="news__post-logo">
+                    <div class="news__post-header-text">
+                      <h3 class="news__post-title">Serious Science</h3>
+                      <p class="news__post-date">December 31, 2021</p>
+                    </div>
+                    <svg class="news__post-vk-logo" width="25" height="25" aria-hidden="true">
+                      <use xlink:href="#logo-vk"></use>
+                    </svg>
+                  </div>
+                  <div class="news__post-text">
+                    How does diabetes challenge sustainable development of low-income countries?
+                  </div>
+                  <a href="#" class="news__post-link">Read more</a>
+                </div>
+                <img src="img/content/news-post-photo.png" class="news__post-photo">
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="news__post">
+                <div class="news__post-wrapper">
+                  <div class="news__post-header">
+                    <img src="img/content/news-post-logo.png" class="news__post-logo">
+                    <div class="news__post-header-text">
+                      <h3 class="news__post-title">Serious Science</h3>
+                      <p class="news__post-date">December 31, 2021</p>
+                    </div>
+                    <svg class="news__post-vk-logo" width="25" height="25" aria-hidden="true">
+                      <use xlink:href="#logo-vk"></use>
+                    </svg>
+                  </div>
+                  <div class="news__post-text">
+                    How does diabetes challenge sustainable development of low-income countries?
+                  </div>
+                  <a href="#" class="news__post-link">Read more</a>
+                </div>
+                <img src="img/content/news-post-photo.png" class="news__post-photo">
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="news__post">
+                <div class="news__post-wrapper">
+                  <div class="news__post-header">
+                    <img src="img/content/news-post-logo.png" class="news__post-logo">
+                    <div class="news__post-header-text">
+                      <h3 class="news__post-title">Serious Science</h3>
+                      <p class="news__post-date">December 31, 2021</p>
+                    </div>
+                    <svg class="news__post-vk-logo" width="25" height="25" aria-hidden="true">
+                      <use xlink:href="#logo-vk"></use>
+                    </svg>
+                  </div>
+                  <div class="news__post-text">
+                    How does diabetes challenge sustainable development of low-income countries?
+                  </div>
+                  <a href="#" class="news__post-link">Read more</a>
+                </div>
+                <img src="img/content/news-post-photo.png" class="news__post-photo">
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="news__post">
+                <div class="news__post-wrapper">
+                  <div class="news__post-header">
+                    <img src="img/content/news-post-logo.png" class="news__post-logo">
+                    <div class="news__post-header-text">
+                      <h3 class="news__post-title">Serious Science</h3>
+                      <p class="news__post-date">December 31, 2021</p>
+                    </div>
+                    <svg class="news__post-vk-logo" width="25" height="25" aria-hidden="true">
+                      <use xlink:href="#logo-vk"></use>
+                    </svg>
+                  </div>
+                  <div class="news__post-text">
+                    How does diabetes challenge sustainable development of low-income countries?
+                  </div>
+                  <a href="#" class="news__post-link">Read more</a>
+                </div>
+                <img src="img/content/news-post-photo.png" class="news__post-photo">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="news__slider-navigation">
+          <button class="slider-navigation-btn slider-navigation-btn--prev"></button>
+          <button class="slider-navigation-btn slider-navigation-btn--next"></button>
+        </div>
+      </section>
+      <section id="enviromental" class="enviromental news-block">
+        <div class="container">
+          <h2 class="news-block__title title-lg">Enviromental</h2>
+          <p class="news-block__description">
+            Для нашей компании очень важна забота об&nbsp;окружающей среде. Но&nbsp;планету сберечь можно только общими усилиями. Забота о&nbsp;ней&nbsp;&mdash; это дело каждого человека, которое начинается с&nbsp;малого. Это выключить свет. Это новый энергоэффективный дата-центр и&nbsp;машина с&nbsp;электродвигателем. Посаженное на&nbsp;улице города дерево.
+          </p>
+          <div class="news-block__news-list">
+            <ul class="news-block__news-list-column">
+              <li class="news-block__news">
+                <div class="test test--green" data-test-id="15648657">
+                  <p class="test__question">На&nbsp;сколько выросли пожертвования на&nbsp;эко-проекты Добро.Mail.ru в&nbsp;2021&nbsp;г.?</p>
+                  <ul class="test__answers">
+                    <li class="test__answer">
+                      <button>10%</button>
+                    </li>
+                    <li class="test__answer">
+                      <button>30%</button>
+                    </li>
+                    <li class="test__answer">
+                      <button>50%</button>
+                    </li>
+                    <li class="test__answer">
+                      <button>60%</button>
+                    </li>
+                  </ul>
+                  <p class="test__count">
+                    Проголосовали <span>-</span> человек
+                  </p>
+                </div>
+              </li>
+              <li class="news-block__news">
+                <div class="post">
+                  <div class="post__photo-wrapper">
+                    <img src="img/content/post-1.png" class="post__photo">
+                    <button class="like-button" data-id="6">
+                      <svg class="like-button__icon" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.02632 4.88C5.42193 4.88 2.5 7.80194 2.5 11.4063C2.5 15.0191 3.94498 16.8274 9.99323 21.5316L12.7721 23.6929C13.4943 24.2547 14.5057 24.2547 15.2279 23.6929L18.0068 21.5316C24.055 16.8274 25.5 15.0191 25.5 11.4063C25.5 7.80194 22.5781 4.88 18.9737 4.88C17.1022 4.88 15.4359 5.73037 14 7.36655C12.5641 5.73037 10.8978 4.88 9.02632 4.88ZM9.02632 6.88C10.5455 6.88 11.9149 7.73752 13.1775 9.56335L13.3831 9.86069C13.6187 10.2014 14.0859 10.2866 14.4266 10.051C14.501 9.99953 14.5654 9.93507 14.6169 9.86069L14.8225 9.56335C16.0851 7.73752 17.4545 6.88 18.9737 6.88C21.4735 6.88 23.5 8.90651 23.5 11.4063C23.5 14.1866 22.3625 15.61 16.7789 19.9529L14 22.1142L11.2211 19.9529C5.63746 15.61 4.5 14.1866 4.5 11.4063C4.5 8.90651 6.5265 6.88 9.02632 6.88Z" fill="white" />
+                        <path d="M9.02632 4.88C5.42193 4.88 2.5 7.80194 2.5 11.4063C2.5 15.0191 3.94498 16.8274 9.99323 21.5316L12.7721 23.6929C13.4943 24.2547 14.5057 24.2547 15.2279 23.6929L18.0068 21.5316C24.055 16.8274 25.5 15.0191 25.5 11.4063C25.5 7.80194 22.5781 4.88 18.9737 4.88C17.1022 4.88 15.4359 5.73037 14 7.36655C12.5641 5.73037 10.8978 4.88 9.02632 4.88Z" fill="white" />
+                      </svg>
+                      <span class="like-button__counter">-</span>
+                    </button>
+                  </div>
+                  <h3 class="post__title">Якутия Горит! Остановим лесные пожары</h3>
+                  <p class="post__description">
+                    Летом 2021 года на&nbsp;территории самого большого региона России&nbsp;&mdash; Республики Саха (Якутия)&nbsp;&mdash; бушевали разрушительные лесные пожары. Они охватили территорию более 7&nbsp;000&nbsp;000 гектаров&nbsp;&mdash; это больше, чем территория Грузии. Добро.Mail.ru собрали &gt;580,000&nbsp;рублей, которые помогли купить необходимое оборудование для тушения пожаров.
+                  </p>
+                </div>
+              </li>
+              <li class="news-block__news">
+                <div class="post">
+                  <div class="post__photo-wrapper">
+                    <img src="img/content/post-2.png" class="post__photo">
+                    <button class="like-button" data-id="7">
+                      <svg class="like-button__icon" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.02632 4.88C5.42193 4.88 2.5 7.80194 2.5 11.4063C2.5 15.0191 3.94498 16.8274 9.99323 21.5316L12.7721 23.6929C13.4943 24.2547 14.5057 24.2547 15.2279 23.6929L18.0068 21.5316C24.055 16.8274 25.5 15.0191 25.5 11.4063C25.5 7.80194 22.5781 4.88 18.9737 4.88C17.1022 4.88 15.4359 5.73037 14 7.36655C12.5641 5.73037 10.8978 4.88 9.02632 4.88ZM9.02632 6.88C10.5455 6.88 11.9149 7.73752 13.1775 9.56335L13.3831 9.86069C13.6187 10.2014 14.0859 10.2866 14.4266 10.051C14.501 9.99953 14.5654 9.93507 14.6169 9.86069L14.8225 9.56335C16.0851 7.73752 17.4545 6.88 18.9737 6.88C21.4735 6.88 23.5 8.90651 23.5 11.4063C23.5 14.1866 22.3625 15.61 16.7789 19.9529L14 22.1142L11.2211 19.9529C5.63746 15.61 4.5 14.1866 4.5 11.4063C4.5 8.90651 6.5265 6.88 9.02632 6.88Z" fill="white" />
+                        <path d="M9.02632 4.88C5.42193 4.88 2.5 7.80194 2.5 11.4063C2.5 15.0191 3.94498 16.8274 9.99323 21.5316L12.7721 23.6929C13.4943 24.2547 14.5057 24.2547 15.2279 23.6929L18.0068 21.5316C24.055 16.8274 25.5 15.0191 25.5 11.4063C25.5 7.80194 22.5781 4.88 18.9737 4.88C17.1022 4.88 15.4359 5.73037 14 7.36655C12.5641 5.73037 10.8978 4.88 9.02632 4.88Z" fill="white" />
+                      </svg>
+                      <span class="like-button__counter">-</span>
+                    </button>
+                  </div>
+                  <h3 class="post__title">VK - Дельфа</h3>
+                  <p class="post__description">
+                    В&nbsp;2021 году&nbsp;VK начала сотрудничество с&nbsp;фондом по&nbsp;спасению дельфинов &laquo;Дельфа&raquo;. Фонд &laquo;Дельфа&raquo; занимается организацией лечения, реабилитации и&nbsp;скорой помощи для черноморских дельфинов. Сейчас краснокнижные дельфины-афалины находятся на&nbsp;грани исчезновения и&nbsp;нередко попадают в&nbsp;нелегальные дельфинарии. &laquo;Дельфа&raquo; помогает возвращать им&nbsp;свободу, а&nbsp;также выхаживает тех дельфинов, которые нуждаются в&nbsp;помощи человека.
+                  </p>
+                </div>
+              </li>
+            </ul>
+            <ul class="news-block__news-list-column">
+              <li class="news-block__news">
+                <div class="post">
+                  <div class="post__photo-wrapper">
+                    <iframe class="post__photo" width="550" height="300" src="//ok.ru/videoembed/2211769354951" frameborder="0" allow="autoplay" allowfullscreen></iframe>
+                    <button class="like-button" data-id="8">
+                      <svg class="like-button__icon" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.02632 4.88C5.42193 4.88 2.5 7.80194 2.5 11.4063C2.5 15.0191 3.94498 16.8274 9.99323 21.5316L12.7721 23.6929C13.4943 24.2547 14.5057 24.2547 15.2279 23.6929L18.0068 21.5316C24.055 16.8274 25.5 15.0191 25.5 11.4063C25.5 7.80194 22.5781 4.88 18.9737 4.88C17.1022 4.88 15.4359 5.73037 14 7.36655C12.5641 5.73037 10.8978 4.88 9.02632 4.88ZM9.02632 6.88C10.5455 6.88 11.9149 7.73752 13.1775 9.56335L13.3831 9.86069C13.6187 10.2014 14.0859 10.2866 14.4266 10.051C14.501 9.99953 14.5654 9.93507 14.6169 9.86069L14.8225 9.56335C16.0851 7.73752 17.4545 6.88 18.9737 6.88C21.4735 6.88 23.5 8.90651 23.5 11.4063C23.5 14.1866 22.3625 15.61 16.7789 19.9529L14 22.1142L11.2211 19.9529C5.63746 15.61 4.5 14.1866 4.5 11.4063C4.5 8.90651 6.5265 6.88 9.02632 6.88Z" fill="white" />
+                        <path d="M9.02632 4.88C5.42193 4.88 2.5 7.80194 2.5 11.4063C2.5 15.0191 3.94498 16.8274 9.99323 21.5316L12.7721 23.6929C13.4943 24.2547 14.5057 24.2547 15.2279 23.6929L18.0068 21.5316C24.055 16.8274 25.5 15.0191 25.5 11.4063C25.5 7.80194 22.5781 4.88 18.9737 4.88C17.1022 4.88 15.4359 5.73037 14 7.36655C12.5641 5.73037 10.8978 4.88 9.02632 4.88Z" fill="white" />
+                      </svg>
+                      <span class="like-button__counter">-</span>
+                    </button>
+                  </div>
+                  <h3 class="post__title">Час Земли</h3>
+                  <p class="post__description">
+                    Каждый год проекты&nbsp;VK участвуют в&nbsp;экологической акции WWF &laquo;Час Земли&raquo;. В&nbsp;2021 году проект поддержали ВКонтакте, Одноклассники, Дети Mail.ru, Добро Mail.ru и&nbsp;DonationAlerts
+                  </p>
+                  <a href="#" class="post__more">Результаты проекта</a>
+                </div>
+              </li>
+              <li class="news-block__news">
+                <div class="post">
+                  <div class="post__photo-wrapper">
+                    <img src="img/content/post-4.png" class="post__photo">
+                    <button class="like-button" data-id="9">
+                      <svg class="like-button__icon" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.02632 4.88C5.42193 4.88 2.5 7.80194 2.5 11.4063C2.5 15.0191 3.94498 16.8274 9.99323 21.5316L12.7721 23.6929C13.4943 24.2547 14.5057 24.2547 15.2279 23.6929L18.0068 21.5316C24.055 16.8274 25.5 15.0191 25.5 11.4063C25.5 7.80194 22.5781 4.88 18.9737 4.88C17.1022 4.88 15.4359 5.73037 14 7.36655C12.5641 5.73037 10.8978 4.88 9.02632 4.88ZM9.02632 6.88C10.5455 6.88 11.9149 7.73752 13.1775 9.56335L13.3831 9.86069C13.6187 10.2014 14.0859 10.2866 14.4266 10.051C14.501 9.99953 14.5654 9.93507 14.6169 9.86069L14.8225 9.56335C16.0851 7.73752 17.4545 6.88 18.9737 6.88C21.4735 6.88 23.5 8.90651 23.5 11.4063C23.5 14.1866 22.3625 15.61 16.7789 19.9529L14 22.1142L11.2211 19.9529C5.63746 15.61 4.5 14.1866 4.5 11.4063C4.5 8.90651 6.5265 6.88 9.02632 6.88Z" fill="white" />
+                        <path d="M9.02632 4.88C5.42193 4.88 2.5 7.80194 2.5 11.4063C2.5 15.0191 3.94498 16.8274 9.99323 21.5316L12.7721 23.6929C13.4943 24.2547 14.5057 24.2547 15.2279 23.6929L18.0068 21.5316C24.055 16.8274 25.5 15.0191 25.5 11.4063C25.5 7.80194 22.5781 4.88 18.9737 4.88C17.1022 4.88 15.4359 5.73037 14 7.36655C12.5641 5.73037 10.8978 4.88 9.02632 4.88Z" fill="white" />
+                      </svg>
+                      <span class="like-button__counter">-</span>
+                    </button>
+                  </div>
+                  <h3 class="post__title">ЦОД: новый энергоэффективный центр </h3>
+                  <p class="post__description">
+                    В&nbsp;2021 году мы&nbsp;запустили проектирование нового дата-центра, первая очередь которого рассчитана на&nbsp;общую мощность в&nbsp;5МВт. Первые результаты тепловых тестов, проведенных в&nbsp;нашей новой лаборатории, позволили значительно повысить допустимую температуру эксплуатации оборудования, что было учтено на&nbsp;этапе проектирования при выборе концепции решения. Пиковый расчетный PUE должен составить всего 1.15, что означает для нас до &minus;40% от&nbsp;общего потребления дата-центра при идентичной вычислительной мощности относительно, например, классической фреоновой системы.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <img class="bg-circle" id="circle2" src="img/svg/bg-circle-green.svg" />
+      </section>
+      <section id="social" class="social news-block">
+        <div class="container">
+          <h2 class="news-block__title title-lg">Social</h2>
+          <p class="news-block__description">
+            Наши сотрудники&nbsp;&mdash; это&nbsp;то, что делает нас успешным бизнесом. Мы&nbsp;считаем своей важнейшей задачей привлекать и&nbsp;удерживать лучших специалистов, обеспечивая инклюзивную, справедливую и&nbsp;благоприятную рабочую среду. Мы&nbsp;сотрудничаем с&nbsp;ведущими университетами и&nbsp;школами для привлечения талантливых студентов.
+          </p>
+          <div class="news-block__news-list">
+            <ul class="news-block__news-list-column">
+              <li class="news-block__news">
+                <div class="test test--blue" data-test-id="34798512">
+                  <p class="test__question">Сколько лет самому старшему сотруднику&nbsp;VK?</p>
+                  <ul class="test__answers">
+                    <li class="test__answer">
+                      <button>57</button>
+                    </li>
+                    <li class="test__answer">
+                      <button>63</button>
+                    </li>
+                    <li class="test__answer">
+                      <button>71</button>
+                    </li>
+                    <li class="test__answer">
+                      <button>85</button>
+                    </li>
+                  </ul>
+                  <p class="test__count">
+                    Проголосовали <span>-</span> человек
+                  </p>
+                </div>
+              </li>
+              <li class="news-block__news">
+                <div class="post">
+                  <div class="post__photo-wrapper">
+                    <img src="img/content/post-8.png" class="post__photo">
+                    <button class="like-button" data-id="13">
+                      <svg class="like-button__icon" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.02632 4.88C5.42193 4.88 2.5 7.80194 2.5 11.4063C2.5 15.0191 3.94498 16.8274 9.99323 21.5316L12.7721 23.6929C13.4943 24.2547 14.5057 24.2547 15.2279 23.6929L18.0068 21.5316C24.055 16.8274 25.5 15.0191 25.5 11.4063C25.5 7.80194 22.5781 4.88 18.9737 4.88C17.1022 4.88 15.4359 5.73037 14 7.36655C12.5641 5.73037 10.8978 4.88 9.02632 4.88ZM9.02632 6.88C10.5455 6.88 11.9149 7.73752 13.1775 9.56335L13.3831 9.86069C13.6187 10.2014 14.0859 10.2866 14.4266 10.051C14.501 9.99953 14.5654 9.93507 14.6169 9.86069L14.8225 9.56335C16.0851 7.73752 17.4545 6.88 18.9737 6.88C21.4735 6.88 23.5 8.90651 23.5 11.4063C23.5 14.1866 22.3625 15.61 16.7789 19.9529L14 22.1142L11.2211 19.9529C5.63746 15.61 4.5 14.1866 4.5 11.4063C4.5 8.90651 6.5265 6.88 9.02632 6.88Z" fill="white" />
+                        <path d="M9.02632 4.88C5.42193 4.88 2.5 7.80194 2.5 11.4063C2.5 15.0191 3.94498 16.8274 9.99323 21.5316L12.7721 23.6929C13.4943 24.2547 14.5057 24.2547 15.2279 23.6929L18.0068 21.5316C24.055 16.8274 25.5 15.0191 25.5 11.4063C25.5 7.80194 22.5781 4.88 18.9737 4.88C17.1022 4.88 15.4359 5.73037 14 7.36655C12.5641 5.73037 10.8978 4.88 9.02632 4.88Z" fill="white" />
+                      </svg>
+                      <span class="like-button__counter">-</span>
+                    </button>
+                  </div>
+                  <h3 class="post__title">Таланты</h3>
+                  <p class="post__description">
+                    Привлечение и&nbsp;развитие талантов&nbsp;&mdash; одно из&nbsp;важнейших направлений ESG-стратегии VK. В&nbsp;2021 году мы&nbsp;провели оценку для 3586&nbsp;сотрудников, чтобы найти таланты на&nbsp;ключевых ролях, и&nbsp;составили 420 индивидуальных планов по&nbsp;развитию и&nbsp;удержанию для них. Для непрерывного развития сотрудников мы&nbsp;провели оценку навыков для 38&nbsp;команд, в&nbsp;которых приняли участие 6900+&nbsp;сотрудников. А&nbsp;для развития команд мы&nbsp;запустили большое исследование вовлеченности и&nbsp;лояльности, где приняли участие 5159 человек (60% компании) и&nbsp;оставили 1500+ идеи по&nbsp;улучшению внутренних процессов и&nbsp;взаимодействия.
+                  </p>
+                  <a href="#" class="post__more">Результаты проекта</a>
+                </div>
+              </li>
+              <li class="news-block__news">
+                <div class="post">
+                  <div class="post__photo-wrapper">
+                    <iframe class="post__photo" width="467" height="293" src="https://www.youtube.com/embed/_1efTVQUFiE" title="Онлайн-тренажер поддержки #надопоговорить" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <button class="like-button" data-id="10">
+                      <svg class="like-button__icon" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.02632 4.88C5.42193 4.88 2.5 7.80194 2.5 11.4063C2.5 15.0191 3.94498 16.8274 9.99323 21.5316L12.7721 23.6929C13.4943 24.2547 14.5057 24.2547 15.2279 23.6929L18.0068 21.5316C24.055 16.8274 25.5 15.0191 25.5 11.4063C25.5 7.80194 22.5781 4.88 18.9737 4.88C17.1022 4.88 15.4359 5.73037 14 7.36655C12.5641 5.73037 10.8978 4.88 9.02632 4.88ZM9.02632 6.88C10.5455 6.88 11.9149 7.73752 13.1775 9.56335L13.3831 9.86069C13.6187 10.2014 14.0859 10.2866 14.4266 10.051C14.501 9.99953 14.5654 9.93507 14.6169 9.86069L14.8225 9.56335C16.0851 7.73752 17.4545 6.88 18.9737 6.88C21.4735 6.88 23.5 8.90651 23.5 11.4063C23.5 14.1866 22.3625 15.61 16.7789 19.9529L14 22.1142L11.2211 19.9529C5.63746 15.61 4.5 14.1866 4.5 11.4063C4.5 8.90651 6.5265 6.88 9.02632 6.88Z" fill="white" />
+                        <path d="M9.02632 4.88C5.42193 4.88 2.5 7.80194 2.5 11.4063C2.5 15.0191 3.94498 16.8274 9.99323 21.5316L12.7721 23.6929C13.4943 24.2547 14.5057 24.2547 15.2279 23.6929L18.0068 21.5316C24.055 16.8274 25.5 15.0191 25.5 11.4063C25.5 7.80194 22.5781 4.88 18.9737 4.88C17.1022 4.88 15.4359 5.73037 14 7.36655C12.5641 5.73037 10.8978 4.88 9.02632 4.88Z" fill="white" />
+                      </svg>
+                      <span class="like-button__counter">-</span>
+                    </button>
+                  </div>
+                  <h3 class="post__title">#НадоПоговорить</h3>
+                  <p class="post__description">
+                    В&nbsp;2021 году Добро Mail.ru запустили кампанию #надопоговорить. Цель проекта: дестигматизировать тему перинатальных потерь в&nbsp;России. Mail.ru Group и&nbsp;Добро Mail.ru вместе с&nbsp;экспертами и&nbsp;некоммерческими организациями изучили перинатальные потери и&nbsp;помогают семьям, столкнувшимся с&nbsp;ними, жить дальше.
+                  </p>
+                </div>
+              </li>
+            </ul>
+            <ul class="news-block__news-list-column">
+              <li class="news-block__news">
+                <div class="post">
+                  <div class="post__photo-wrapper">
+                    <img src="img/content/post-9.png" class="post__photo">
+                    <button class="like-button" data-id="14">
+                      <svg class="like-button__icon" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.02632 4.88C5.42193 4.88 2.5 7.80194 2.5 11.4063C2.5 15.0191 3.94498 16.8274 9.99323 21.5316L12.7721 23.6929C13.4943 24.2547 14.5057 24.2547 15.2279 23.6929L18.0068 21.5316C24.055 16.8274 25.5 15.0191 25.5 11.4063C25.5 7.80194 22.5781 4.88 18.9737 4.88C17.1022 4.88 15.4359 5.73037 14 7.36655C12.5641 5.73037 10.8978 4.88 9.02632 4.88ZM9.02632 6.88C10.5455 6.88 11.9149 7.73752 13.1775 9.56335L13.3831 9.86069C13.6187 10.2014 14.0859 10.2866 14.4266 10.051C14.501 9.99953 14.5654 9.93507 14.6169 9.86069L14.8225 9.56335C16.0851 7.73752 17.4545 6.88 18.9737 6.88C21.4735 6.88 23.5 8.90651 23.5 11.4063C23.5 14.1866 22.3625 15.61 16.7789 19.9529L14 22.1142L11.2211 19.9529C5.63746 15.61 4.5 14.1866 4.5 11.4063C4.5 8.90651 6.5265 6.88 9.02632 6.88Z" fill="white" />
+                        <path d="M9.02632 4.88C5.42193 4.88 2.5 7.80194 2.5 11.4063C2.5 15.0191 3.94498 16.8274 9.99323 21.5316L12.7721 23.6929C13.4943 24.2547 14.5057 24.2547 15.2279 23.6929L18.0068 21.5316C24.055 16.8274 25.5 15.0191 25.5 11.4063C25.5 7.80194 22.5781 4.88 18.9737 4.88C17.1022 4.88 15.4359 5.73037 14 7.36655C12.5641 5.73037 10.8978 4.88 9.02632 4.88Z" fill="white" />
+                      </svg>
+                      <span class="like-button__counter">-</span>
+                    </button>
+                  </div>
+                  <h3 class="post__title">VK&nbsp;Образование (Профориентационная кампания для школьников по&nbsp;теме разработки игр)</h3>
+                  <p class="post__description">
+                    В&nbsp;2021 году&nbsp;VK активно помогала школьникам из&nbsp;разных уголков страны стать ближе к&nbsp;миру разработки игр. Знакомство ребят с&nbsp;профессиями в&nbsp;игровой сфере началось с&nbsp;профориентационной акции &laquo;День ИТ-знаний&raquo; с&nbsp;участием экспертов MY.GAMES и&nbsp;индустрии&nbsp;&mdash; она собрала <b>СВЫШЕ 290&nbsp;ТЫСЯЧ ШКОЛЬНИКОВ</b>. На&nbsp;втором этапе&nbsp;VK провела свой &laquo;Урок цифры&raquo;&nbsp;&mdash; <b>БОЛЕЕ 3&nbsp;МЛН ШКОЛЬНИКОВ</b> на&nbsp;специальных тренажерах от&nbsp;студии BIT.GAMES смогли попробовать свои силы в&nbsp;качестве разработчиков игр и&nbsp;других профессиях. Завершающим этапом кампании стала Всероссийская олимпиада по&nbsp;программированию совместно с&nbsp;Учи.ру, в&nbsp;которой приняли участие <b>577&nbsp;ТЫСЯЧ ШКОЛЬНИКОВ</b>.
+                  </p>
+                </div>
+              </li>
+              <li class="news-block__news">
+                <div class="post">
+                  <div class="post__photo-wrapper">
+                    <iframe class="post__photo" src="https://vk.com/video_ext.php?oid=-101435075&id=456239491&hash=f31cd889ff284c7a" width="640" height="360" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                    <button class="like-button" data-id="12">
+                      <svg class="like-button__icon" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.02632 4.88C5.42193 4.88 2.5 7.80194 2.5 11.4063C2.5 15.0191 3.94498 16.8274 9.99323 21.5316L12.7721 23.6929C13.4943 24.2547 14.5057 24.2547 15.2279 23.6929L18.0068 21.5316C24.055 16.8274 25.5 15.0191 25.5 11.4063C25.5 7.80194 22.5781 4.88 18.9737 4.88C17.1022 4.88 15.4359 5.73037 14 7.36655C12.5641 5.73037 10.8978 4.88 9.02632 4.88ZM9.02632 6.88C10.5455 6.88 11.9149 7.73752 13.1775 9.56335L13.3831 9.86069C13.6187 10.2014 14.0859 10.2866 14.4266 10.051C14.501 9.99953 14.5654 9.93507 14.6169 9.86069L14.8225 9.56335C16.0851 7.73752 17.4545 6.88 18.9737 6.88C21.4735 6.88 23.5 8.90651 23.5 11.4063C23.5 14.1866 22.3625 15.61 16.7789 19.9529L14 22.1142L11.2211 19.9529C5.63746 15.61 4.5 14.1866 4.5 11.4063C4.5 8.90651 6.5265 6.88 9.02632 6.88Z" fill="white" />
+                        <path d="M9.02632 4.88C5.42193 4.88 2.5 7.80194 2.5 11.4063C2.5 15.0191 3.94498 16.8274 9.99323 21.5316L12.7721 23.6929C13.4943 24.2547 14.5057 24.2547 15.2279 23.6929L18.0068 21.5316C24.055 16.8274 25.5 15.0191 25.5 11.4063C25.5 7.80194 22.5781 4.88 18.9737 4.88C17.1022 4.88 15.4359 5.73037 14 7.36655C12.5641 5.73037 10.8978 4.88 9.02632 4.88Z" fill="white" />
+                      </svg>
+                      <span class="like-button__counter">-</span>
+                    </button>
+                  </div>
+                  <h3 class="post__title">КиберБуллинг</h3>
+                  <p class="post__description">
+                    В&nbsp;2019 году мы&nbsp;учредили в&nbsp;России День борьбы с&nbsp;кибербуллингом, чтобы общество осознало всю серьезность проблемы. С&nbsp;11&nbsp;до&nbsp;30&nbsp;ноября мы&nbsp;говорим о&nbsp;проблеме кибербуллинга в&nbsp;России, о&nbsp;том, как человек может остановить травлю, кем&nbsp;бы он&nbsp;в&nbsp;этой ситуации ни&nbsp;был&nbsp;&mdash; жертвой, наблюдателем или агрессором. В&nbsp;2021 этом году проект поддержали более 70&nbsp;брендов.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <img class="bg-circle" id="circle4" src="img/svg/bg-circle-turquoise.svg" />
+      </section>
+      <section id="governance" class="governance news-block">
+        <div class="container">
+          <h2 class="news-block__title title-lg">Governance</h2>
+          <p class="news-block__description">
+            Высокое качество корпоративного управления&nbsp;&mdash; важнейшая часть нашего ESG-подхода. Мы&nbsp;делаем фокус на&nbsp;кибербезопасности и&nbsp;стараемся продвигать повестку устойчивого развития на&nbsp;всех уровнях компании.
+          </p>
+          <div class="news-block__news-list">
+            <ul class="news-block__news-list-column">
+              <li class="news-block__news">
+                <div class="test test--pink" data-test-id="65471834">
+                  <p class="test__question">Сколько VK&nbsp;выплатила независимым исследователям в&nbsp;рамках программы поиска уязвимостей за&nbsp;вознаграждение Bug Bounty в&nbsp;2021&nbsp;году?</p>
+                  <ul class="test__answers">
+                    <li class="test__answer">
+                      <button>50 000$</button>
+                    </li>
+                    <li class="test__answer">
+                      <button>150 000$</button>
+                    </li>
+                    <li class="test__answer">
+                      <button>300 000$</button>
+                    </li>
+                    <li class="test__answer">
+                      <button>500 000$</button>
+                    </li>
+                  </ul>
+                  <p class="test__count">
+                    Проголосовали <span>-</span> человек
+                  </p>
+                </div>
+              </li>
+              <li class="news-block__news">
+                <div class="post">
+                  <div class="post__photo-wrapper">
+                    <img src="img/content/post-10.png" class="post__photo">
+                    <button class="like-button" data-id="15">
+                      <svg class="like-button__icon" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.02632 4.88C5.42193 4.88 2.5 7.80194 2.5 11.4063C2.5 15.0191 3.94498 16.8274 9.99323 21.5316L12.7721 23.6929C13.4943 24.2547 14.5057 24.2547 15.2279 23.6929L18.0068 21.5316C24.055 16.8274 25.5 15.0191 25.5 11.4063C25.5 7.80194 22.5781 4.88 18.9737 4.88C17.1022 4.88 15.4359 5.73037 14 7.36655C12.5641 5.73037 10.8978 4.88 9.02632 4.88ZM9.02632 6.88C10.5455 6.88 11.9149 7.73752 13.1775 9.56335L13.3831 9.86069C13.6187 10.2014 14.0859 10.2866 14.4266 10.051C14.501 9.99953 14.5654 9.93507 14.6169 9.86069L14.8225 9.56335C16.0851 7.73752 17.4545 6.88 18.9737 6.88C21.4735 6.88 23.5 8.90651 23.5 11.4063C23.5 14.1866 22.3625 15.61 16.7789 19.9529L14 22.1142L11.2211 19.9529C5.63746 15.61 4.5 14.1866 4.5 11.4063C4.5 8.90651 6.5265 6.88 9.02632 6.88Z" fill="white" />
+                        <path d="M9.02632 4.88C5.42193 4.88 2.5 7.80194 2.5 11.4063C2.5 15.0191 3.94498 16.8274 9.99323 21.5316L12.7721 23.6929C13.4943 24.2547 14.5057 24.2547 15.2279 23.6929L18.0068 21.5316C24.055 16.8274 25.5 15.0191 25.5 11.4063C25.5 7.80194 22.5781 4.88 18.9737 4.88C17.1022 4.88 15.4359 5.73037 14 7.36655C12.5641 5.73037 10.8978 4.88 9.02632 4.88Z" fill="white" />
+                      </svg>
+                      <span class="like-button__counter">-</span>
+                    </button>
+                  </div>
+                  <h3 class="post__title">Кибербезопасность</h3>
+                  <p class="post__description">
+                    В&nbsp;2021 году мы&nbsp;запустили реформу системы информационной безопасности и&nbsp;обновленную программу защиты данных пользователей&nbsp;&mdash; VK&nbsp;Protect. VK&nbsp;ID&nbsp;появился во&nbsp;всех сервисах экосистемы, вместе с&nbsp;ним всем пользователям стала доступна двухфакторная аутентификация. Наиболее важная цель программы VK&nbsp;Protect&nbsp;&mdash; рассказать, как повысить уровень защиты данных, и&nbsp;дать инструменты для этого.
+                  </p>
+                </div>
+              </li>
+            </ul>
+            <ul class="news-block__news-list-column">
+              <li class="news-block__news">
+                <div class="post">
+                  <div class="post__photo-wrapper">
+                    <img src="img/content/post-12.png" class="post__photo">
+                    <button class="like-button" data-id="17">
+                      <svg class="like-button__icon" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.02632 4.88C5.42193 4.88 2.5 7.80194 2.5 11.4063C2.5 15.0191 3.94498 16.8274 9.99323 21.5316L12.7721 23.6929C13.4943 24.2547 14.5057 24.2547 15.2279 23.6929L18.0068 21.5316C24.055 16.8274 25.5 15.0191 25.5 11.4063C25.5 7.80194 22.5781 4.88 18.9737 4.88C17.1022 4.88 15.4359 5.73037 14 7.36655C12.5641 5.73037 10.8978 4.88 9.02632 4.88ZM9.02632 6.88C10.5455 6.88 11.9149 7.73752 13.1775 9.56335L13.3831 9.86069C13.6187 10.2014 14.0859 10.2866 14.4266 10.051C14.501 9.99953 14.5654 9.93507 14.6169 9.86069L14.8225 9.56335C16.0851 7.73752 17.4545 6.88 18.9737 6.88C21.4735 6.88 23.5 8.90651 23.5 11.4063C23.5 14.1866 22.3625 15.61 16.7789 19.9529L14 22.1142L11.2211 19.9529C5.63746 15.61 4.5 14.1866 4.5 11.4063C4.5 8.90651 6.5265 6.88 9.02632 6.88Z" fill="white" />
+                        <path d="M9.02632 4.88C5.42193 4.88 2.5 7.80194 2.5 11.4063C2.5 15.0191 3.94498 16.8274 9.99323 21.5316L12.7721 23.6929C13.4943 24.2547 14.5057 24.2547 15.2279 23.6929L18.0068 21.5316C24.055 16.8274 25.5 15.0191 25.5 11.4063C25.5 7.80194 22.5781 4.88 18.9737 4.88C17.1022 4.88 15.4359 5.73037 14 7.36655C12.5641 5.73037 10.8978 4.88 9.02632 4.88Z" fill="white" />
+                      </svg>
+                      <span class="like-button__counter">-</span>
+                    </button>
+                  </div>
+                  <h3 class="post__title">Линия доверия</h3>
+                  <p class="post__description">
+                    В&nbsp;2021 году мы&nbsp;обновили Линию Доверия&nbsp;&mdash; наш независимый, конфиденциальный и&nbsp;анонимный канал связи для &laquo;неудобных вопросов&raquo;, жалоб, сомнений и&nbsp;обращений по&nbsp;поводу того, соблюдает&nbsp;ли VK&nbsp;и&nbsp;ее&nbsp;сотрудники нормы закона и&nbsp;этики. Этот канал доступен для каждого, кто работает в&nbsp;любой из&nbsp;компаний и&nbsp;проектов VK. Линией доверия могут воспользоваться также клиенты, пользователи, партнеры, подрядчики и&nbsp;другие люди, взаимодействующие с&nbsp;компанией.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <img class="bg-circle" id="circle3" src="img/svg/bg-circle-pink.svg" />
+      </section>
+      <div class="bottom-bg">
+        <section id="share" class="share">
+          <h2 class="share__title title-lg">
+            Расскажите о&nbsp;проектах&nbsp;VK
+          </h2>
+          <p class="share__description">
+            Давайте делиться нашими успехами в&nbsp;области ESG, ведь чем больше людей узнает о&nbsp;них&nbsp;&mdash; тем больше участников будет у&nbsp;наших социальных и&nbsp;экологических инициатив. Нам будет очень приятно, если вы&nbsp;поделитесь нашими успехами в&nbsp;своих соцсетях!
+          </p>
+          <ul class="share__social">
+            <li class="share__social-item">
+              <a href="#" class="share__social-link">
+                <svg class="share__social-link-icon" width="20" height="20" aria-hidden="true">
+                  <use xlink:href="#icon-vk"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="share__social-item">
+              <a href="#" class="share__social-link">
+                <svg class="share__social-link-icon" width="12" height="19" aria-hidden="true">
+                  <use xlink:href="#icon-ok"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="share__social-item">
+              <a href="#" class="share__social-link">
+                <svg class="share__social-link-icon" width="20" height="16" aria-hidden="true">
+                  <use xlink:href="#icon-url"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+          <a href="#" class="share__download">Скачать ESG-отчёт</a>
+        </section>
+        <section class="quiz">
+          <h2 class="quiz__title">
+            Пройдите опрос по&nbsp;нашим проектам
+          </h2>
+          <p class="quiz__description">
+            Если вы&nbsp;находитесь на&nbsp;этой страничке&nbsp;&mdash; вы&nbsp;являетесь одним из&nbsp;ключевых стейкхолдеров VK. Пожалуйста, помогите нам расставить приоритеты на&nbsp;2022 год&nbsp;&mdash; пройдите небольшой опрос по&nbsp;существенным темам.
+          </p>
+          <a href="https://survey.alchemer.com/s3/6784913/ESG" class="quiz__link" target="_blank">Пройти опрос</a>
+        </section>
+        <footer class="footer">
+          <nav class="footer__menu">
+            <ul class="footer__menu-list">
+              <li class="footer__menu-list-item">
+                <a href="#welcome" class="footer__menu-link">Манифест</a>
+              </li>
+              <li class="footer__menu-list-item">
+                <a href="#people" class="footer__menu-link">Люди о проектах</a>
+              </li>
+              <li class="footer__menu-list-item">
+                <a href="#enviromental" class="footer__menu-link">Enviromental</a>
+              </li>
+              <li class="footer__menu-list-item">
+                <a href="#social" class="footer__menu-link">Social</a>
+              </li>
+              <li class="footer__menu-list-item">
+                <a href="#governance" class="footer__menu-link">Governance</a>
+              </li>
+              <li class="footer__menu-list-item">
+                <a href="#share" class="footer__menu-link">ESG-отчёт</a>
+              </li>
+            </ul>
+          </nav>
+        </footer>
+        <img class="bg-circle" src="img/bg/bg-circle-blue.png" />
+      </div>
+    </main>
+  </div>
+  <script src="js/vendor.min.js"></script>
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>

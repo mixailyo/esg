@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Project Name - описание">
+  <!-- генерируйте favicon тут - https://realfavicongenerator.net/ -->
+  <!-- ! в подключение фавикон манифеста обязательно добавьте строчки crossorigin="use-credentials"-->
+  <!-- <link href="favicon/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+<link href="favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+<link href="favicon/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+<link href="favicon/site.webmanifest" rel="manifest" crossorigin="use-credentials">
+<link color="#c84659" href="favicon/safari-pinned-tab.svg" rel="mask-icon">
+<link href="favicon/favicon.ico" rel="shortcut icon">
+<meta content="#ffffff" name="msapplication-TileColor">
+<meta content="favicon/browserconfig.xml" name="msapplication-config">
+<meta content="#ffffff" name="theme-color">
+ -->
+  <!-- используйте только для шрифта находящегося на первом экране -->
+  <!-- <link rel="preload" href="fonts/placeholder.woff2" as="font" crossorigin="anonymous"> -->
+  <link rel="stylesheet" href="css/style.min.css">
+  <title>Компоненты</title>
+  <style>
+    main>.container {
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+
+    .components-backwards {
+      display: inline-block;
+      margin-bottom: 10px;
+      margin-left: 7px;
+    }
+
+    .components-backwards span:first-child {
+      position: relative;
+      top: -3px;
+      display: inline-block;
+      margin-right: 15px;
+      font-size: 16px;
+      line-height: 24px;
+      vertical-align: top;
+      transform: scale(2);
+    }
+
+    .components-backwards span:last-child {
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    .components-backwards+h1 {
+      margin-bottom: 0;
+    }
+
+    .container>section {
+      padding: 20px 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div style="display: none;">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <defs>
+        <clipPath id="clip0_349_1511">
+          <rect width="42.0292" height="41.8322" fill="white" transform="translate(0.03125 0.924316)" />
+        </clipPath>
+      </defs>
+      <symbol id="icon-close" viewBox="0 0 20 20">
+        <path d="M.293 18.291a1 1 0 101.414 1.414L10 11.413l8.292 8.292a1 1 0 101.414-1.414l-8.292-8.292 8.292-8.292A1 1 0 1018.291.293L9.999 8.585 1.707.293A1 1 0 10.293 1.707L8.585 10 .293 18.291z" />
+      </symbol>
+      <symbol id="icon-ok" viewBox="0 0 12 19">
+        <path d="M5.92817 9.80459C8.71449 9.80459 10.9859 7.60296 10.9859 4.9023C10.9859 2.20163 8.71449 0 5.92817 0C3.14185 0 0.870397 2.20163 0.870397 4.9023C0.870397 7.60296 3.14185 9.80459 5.92817 9.80459ZM5.92817 2.8768C7.07904 2.8768 8.01791 3.7868 8.01791 4.9023C8.01791 6.01779 7.07904 6.92779 5.92817 6.92779C4.7773 6.92779 3.83843 6.01779 3.83843 4.9023C3.83843 3.7868 4.7773 2.8768 5.92817 2.8768Z" fill="black" />
+        <path d="M7.95735 13.7968C8.98708 13.562 9.98652 13.1804 10.8951 12.6226C11.5917 12.2116 11.8037 11.3016 11.3494 10.6265C10.9254 9.95131 9.98652 9.74582 9.28994 10.1861C7.23048 11.4484 4.53502 11.4484 2.47557 10.1861C1.77899 9.77518 0.870405 9.95131 0.416113 10.6265C-0.00789184 11.3016 0.173825 12.1823 0.870405 12.6226C1.77899 13.1804 2.77843 13.562 3.80815 13.7968L1.05212 16.5562C0.476686 17.1139 0.476686 18.0239 1.05212 18.5817C1.35498 18.8752 1.71842 18.9927 2.11213 18.9927C2.50585 18.9927 2.86929 18.8459 3.17215 18.5817L5.95847 15.881L8.74479 18.5817C9.32022 19.1394 10.2591 19.1394 10.8345 18.5817C11.41 18.0239 11.41 17.1139 10.8345 16.5562L7.95735 13.7968Z" fill="black" />
+      </symbol>
+      <symbol id="icon-url" viewBox="0 0 20 16">
+        <path d="M12.5077 6.67306C12.4042 6.3021 12.0301 6.08605 11.6679 6.19204C11.3057 6.29802 11.0948 6.68121 11.1983 7.05217C11.4132 7.83892 11.1983 8.67866 10.6371 9.25751L6.03636 13.9699C5.1767 14.8504 3.78374 14.8504 2.9201 13.9699C2.06045 13.0894 2.06045 11.6626 2.9201 10.778L7.52086 6.06567C7.82333 5.75586 8.2054 5.54389 8.61931 5.4542C8.98546 5.38083 9.22425 5.01395 9.15261 4.63484C9.08097 4.25573 8.72278 4.01522 8.35265 4.0886C8.34868 4.0886 8.34469 4.0886 8.34071 4.09268C7.66413 4.23943 7.04725 4.58185 6.5617 5.08325L1.96095 9.7956C0.579927 11.2305 0.599827 13.5418 2.00075 14.9523C3.38575 16.3505 5.61051 16.3505 6.99949 14.9523L11.6002 10.2399C12.5077 9.30643 12.8539 7.9449 12.5077 6.67306Z" fill="black" />
+        <path d="M18.8955 1.06806C18.2269 0.383217 17.3194 3.18604e-05 16.3762 3.18604e-05C15.433 -0.00404457 14.5256 0.383217 13.8569 1.06806L9.26016 5.78041C8.34876 6.71392 8.00251 8.07952 8.34876 9.34729C8.45224 9.71825 8.82635 9.9343 9.18852 9.82831C9.55069 9.72232 9.76163 9.33914 9.65815 8.96818C9.44323 8.18143 9.65815 7.34169 10.2193 6.76283L14.8201 2.05048C15.6797 1.16997 17.0727 1.16997 17.9363 2.05048C18.796 2.93099 18.796 4.35774 17.9363 5.24232L13.3356 9.95468C13.0331 10.2645 12.651 10.4765 12.2331 10.5661C11.867 10.6436 11.6282 11.0146 11.7078 11.3896C11.7755 11.7116 12.054 11.944 12.3764 11.944C12.4242 11.944 12.4719 11.9399 12.5157 11.9277C13.1923 11.7809 13.8092 11.4385 14.2947 10.9371L18.8955 6.22475C20.2845 4.80207 20.2845 2.49481 18.8955 1.06806Z" fill="black" />
+      </symbol>
+      <symbol id="icon-vk" viewBox="0 0 21 20">
+        <path d="M11.089 14.3594C6.57384 14.3594 3.83594 11.2439 3.73186 6.06465H6.02146C6.09351 9.86541 7.83071 11.4829 9.16764 11.8096V6.06465H11.3612V9.34748C12.6501 9.20406 13.995 7.71404 14.4433 6.06465H16.5968C16.2526 8.08853 14.7875 9.58653 13.7548 10.2001C14.7875 10.6941 16.4607 12.0008 17.1012 14.3594H14.7315C14.2352 12.7817 13.0023 11.5626 11.3612 11.3953V14.3594H11.089ZM9.95219 19.9211H10.7848C15.3079 19.9211 17.5735 19.9211 18.9745 18.5267C20.3674 17.1243 20.3674 14.8693 20.3674 10.3833V9.53872C20.3674 5.04474 20.3674 2.79776 18.9745 1.39538C17.5735 0.000976562 15.3079 0.000976562 10.7848 0.000976562H9.95219C5.42905 0.000976562 3.16347 0.000976562 1.75449 1.39538C0.345511 2.78979 0.353517 5.05271 0.353517 9.53872V10.3833C0.353517 14.8773 0.353517 17.1243 1.75449 18.5267C3.15546 19.929 5.42905 19.9211 9.95219 19.9211Z" fill="black" />
+      </symbol>
+      <symbol id="logo-vk" viewBox="0 0 43 43">
+        <g clip-path="url(#clip0_349_1511)">
+          <path d="M20.1834 42.7565H21.9335C31.4338 42.7565 36.1848 42.7565 39.1352 39.8199C42.0857 36.8833 42.0604 32.1562 42.0604 22.7239V20.9569C42.0604 11.5263 42.0604 6.79757 39.1352 3.86094C36.21 0.924325 31.4338 0.924316 21.9335 0.924316H20.1834C10.6814 0.924316 5.93215 0.924325 2.9817 3.86094C0.0312481 6.79757 0.03125 11.5229 0.03125 20.9569V22.7239C0.03125 32.1562 0.0312481 36.8833 2.9817 39.8199C5.93215 42.7565 10.6814 42.7565 20.1834 42.7565Z" fill="#0077FF" />
+          <path d="M22.5864 31.0849C13.1096 31.0849 7.35836 24.5407 7.13477 13.666H11.9345C12.0841 21.6543 15.7356 25.0444 18.5348 25.7354V13.666H23.1361V20.5583C25.8361 20.2604 28.6604 17.1247 29.612 13.666H34.136C33.4114 17.9212 30.3366 21.0569 28.1611 22.3504C30.3366 23.3962 33.8367 26.1337 35.1867 31.0849H30.2121C29.1614 27.7752 26.5859 25.2117 23.1361 24.8637V31.0849H22.5864Z" fill="white" />
+        </g>
+      </symbol>
+    </svg>
+  </div>
+  <div class="wrapper">
+    <header class="header">
+      <nav class="header__menu">
+        <svg class="header__logo" width="42" height="42" aria-hidden="true">
+          <use xlink:href="#logo-vk"></use>
+        </svg>
+        <ul class="header__menu-list">
+          <li class="header__menu-list-item">
+            <a href="#welcome" class="header__menu-link">Манифест</a>
+          </li>
+          <li class="header__menu-list-item">
+            <a href="#people" class="header__menu-link">Люди о проектах</a>
+          </li>
+          <li class="header__menu-list-item">
+            <a href="#enviromental" class="header__menu-link">Enviromental</a>
+          </li>
+          <li class="header__menu-list-item">
+            <a href="#social" class="header__menu-link">Social</a>
+          </li>
+          <li class="header__menu-list-item">
+            <a href="#governance" class="header__menu-link">Governance</a>
+          </li>
+          <li class="header__menu-list-item">
+            <a href="#share" class="header__menu-link">ESG-отчёт</a>
+          </li>
+        </ul>
+      </nav>
+      <button class="header__hamburger hamburger hamburger--spring" type="button">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
+    </header>
+    <main>
+      <div class="container">
+        <a class="components-backwards" href="index.html">
+          <span>&larr;</span>
+          <span>вернуться на разводящую</span>
+        </a>
+        <h1>Компоненты, используемые в вёрстке</h1>
+        <section>
+          <h2>Название компонента или группы компонентов</h2>
+          <p>Класс компонента \ модификаторы</p>
+          <p style="color: red;">При необходимости, подсказки \ предупреждение \ важная информация</p>
+          <div>Компонент</div>
+        </section>
+        <!-- Всегда оставляйте коммент ниже, чтобы удобно было копипастить -->
+        <!-- <section>
+          <h2></h2>
+
+          <p></p>
+        </section> -->
+      </div>
+    </main>
+    <footer class="footer">
+      <nav class="footer__menu">
+        <ul class="footer__menu-list">
+          <li class="footer__menu-list-item">
+            <a href="#welcome" class="footer__menu-link">Манифест</a>
+          </li>
+          <li class="footer__menu-list-item">
+            <a href="#people" class="footer__menu-link">Люди о проектах</a>
+          </li>
+          <li class="footer__menu-list-item">
+            <a href="#enviromental" class="footer__menu-link">Enviromental</a>
+          </li>
+          <li class="footer__menu-list-item">
+            <a href="#social" class="footer__menu-link">Social</a>
+          </li>
+          <li class="footer__menu-list-item">
+            <a href="#governance" class="footer__menu-link">Governance</a>
+          </li>
+          <li class="footer__menu-list-item">
+            <a href="#share" class="footer__menu-link">ESG-отчёт</a>
+          </li>
+        </ul>
+      </nav>
+    </footer>
+  </div>
+  <script src="js/vendor.min.js"></script>
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+.slider-navigation-btn {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &::before {
+    content: '';
+    width: 24px;
+    height: 24px;
+    background-image: url('../../img/svg/btn-with-arrow.svg');
+  }
+}
+.slider-navigation-btn--prev {
+  margin-left: -10px;
+  transform: rotate(90deg);
+}
+.slider-navigation-btn--next {
+  margin-right: -10px;
+  transform: rotate(-90deg);
+}

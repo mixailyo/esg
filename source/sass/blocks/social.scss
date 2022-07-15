@@ -1,0 +1,15 @@
+.social {
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    @include adaptiveDesktopToMobile('top', 30, 50);
+    @include adaptiveDesktopToMobile('right', 0, -200);
+    @include adaptiveDesktopToMobile('width', 1438, 479);
+    @include adaptiveDesktopToMobile('height', 809, 270);
+    background-image: url(../../img/bg/illustration-social.png);
+    background-size: cover;
+    z-index: 0;
+  }
+}
